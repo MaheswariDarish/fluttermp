@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "287494323528",
+    "firebase_url": "https://college-10016-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "college-10016",
+    "storage_bucket": "college-10016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287494323528:android:15aed916e16f69c9e8c77d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAoayGp-E1kL14G57h7UXWyDpzQpkVAiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
