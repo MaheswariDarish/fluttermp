@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/SreenHome.dart';
+import 'package:flutter_application_1/screens/StudentNotice.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
       ),
-      home: ScreenHome(),
+      home:PdfViewerSample(),
     );
   }
 }
