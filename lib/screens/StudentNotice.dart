@@ -1,5 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: PdfViewerSample(),
+    );
+  }
+}
 
 class PdfViewerSample extends StatelessWidget {
   @override
@@ -30,13 +43,11 @@ class PdfViewerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('PDF Viewersss'),
+        title: Text('PDF Viewer'),
       ),
-      body: PDFView(
-        filePath: 'https://mrcet.com/downloads/digital_notes/CSE/II%20Year/DBMS.pdf', // Sample PDF URL
+      body: SfPdfViewer.network(
+        'https://mrcet.com/downloads/digital_notes/CSE/II%20Year/DBMS.pdf', // Sample PDF URL
       ),
     );
   }
 }
-
-
