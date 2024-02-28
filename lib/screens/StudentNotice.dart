@@ -30,7 +30,7 @@ class PdfViewerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('PDF Viewer'),
+        title: Text('PDF Viewersss'),
       ),
       body: PDFView(
         filePath: 'https://mrcet.com/downloads/digital_notes/CSE/II%20Year/DBMS.pdf', // Sample PDF URL

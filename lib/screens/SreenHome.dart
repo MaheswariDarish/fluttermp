@@ -13,12 +13,16 @@ class _ScreenHomeState extends State<ScreenHome> {
     Icon(Icons.school, color: Colors.white, size: 30),
     Icon(Icons.how_to_reg, color: Colors.white, size: 30),
     Icon(Icons.work_outline, color: Colors.white, size: 30),
+    Icon(Icons.work_outline, color: Colors.white, size: 30),
+    Icon(Icons.work_outline, color: Colors.white, size: 30)
   ];
   List names = [
     "Public Notice",
     "Students Notice",
     "Tenders",
-    "Admissions"
+    "Admissions",
+    "Messages",
+    "Employment"
   ];
 
   @override
@@ -39,21 +43,20 @@ class _ScreenHomeState extends State<ScreenHome> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: [IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.dehaze_outlined),
+                    ),
                     Expanded(
                       child: Text(
-                        '         HOME',
+                        'HOME',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.dehaze_outlined),
-                    ),
+                    )
                   ],
                 )
               ],
@@ -62,12 +65,12 @@ class _ScreenHomeState extends State<ScreenHome> {
           SizedBox(height: 20),
           Container(
             child: CircleAvatar(
-              radius: 50,
+              radius: 20,
               backgroundColor: const Color.fromARGB(255, 79, 10, 10),
             ),
           ),
           Text(
-            "Organisation",
+            "IHRD",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.black,
@@ -85,23 +88,27 @@ class _ScreenHomeState extends State<ScreenHome> {
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+                    crossAxisCount: 3,
                     childAspectRatio: 1.1,
                   ),
                   itemBuilder: (context, index) {
                     return Container(
                       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                      height: 95,
-                      width: 250,
+                      height: 90,
+                      width: 150,
                       decoration: BoxDecoration(
                         color: Color.fromARGB(224, 53, 0, 0),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Stack(
                         children: [
-                          Center(
-                            child: nameicon[index],
-                          ),
+                          
+                            Positioned(
+
+                              left: 2.5,
+                              right:2.5,
+                             child: nameicon[index]),
+                        
                           Positioned(
                             bottom: 10,
                             left: 0,
