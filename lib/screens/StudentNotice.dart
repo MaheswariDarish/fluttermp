@@ -1,18 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/NoticePage.dart';
+import 'package:http/http.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: PdfViewerSample(),
-    );
-  }
-}
+import 'package:get/get.dart';
 
 class PdfViewerSample extends StatelessWidget {
   @override
@@ -24,12 +14,7 @@ class PdfViewerSample extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PdfViewerPage(),
-              ),
-            );
+            Get.to(NoticePage());
           },
           child: Text('Open PDF'),
         ),
