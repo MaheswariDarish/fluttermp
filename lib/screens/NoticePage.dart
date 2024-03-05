@@ -23,8 +23,8 @@ class _NoticePageState extends State<NoticePage> {
         centerTitle: true,
       ),
       body:  SfPdfViewer.network(
-        'https://mrcet.com/downloads/digital_notes/CSE/II%20Year/DBMS.pdf',
-        key: pdfController.pdfViewerkey , // Sample PDF URL
+        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+        key: pdfController.pdfViewerKey , // Sample PDF URL
       ),
     );
   }

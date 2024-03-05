@@ -9,16 +9,18 @@ class PdfViewerSample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('PDF Viewer Sample'),
+        leading: BackButton(),
+        title: Text('STUDENT NOTICE'),
+        centerTitle: true,
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Get.to(NoticePage());
-          },
-          child: Text('Open PDF'),
-        ),
-      ),
+      // body: Center(
+      //   child: ElevatedButton(
+      //     onPressed: () {
+      //       Get.to(()=>NoticePage());
+      //     },
+      //     child: Text('Open PDF'),
+      //   ),
+      // ),
     );
   }
 }
