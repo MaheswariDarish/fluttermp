@@ -25,16 +25,3 @@ class PdfViewerSample extends StatelessWidget {
   }
 }
 
-class PdfViewerPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('PDF Viewer'),
-      ),
-      body: SfPdfViewer.network(
-        'https://mrcet.com/downloads/digital_notes/CSE/II%20Year/DBMS.pdf', // Sample PDF URL
-      ),
-    );
-  }
-}

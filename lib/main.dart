@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/Institutions/Options.dart';
 import 'package:flutter_application_1/screens/NoticePage.dart';
 import 'package:flutter_application_1/screens/SreenHome.dart';
 import 'package:flutter_application_1/screens/StudentNotice.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
       ),
-      home:PdfViewerSample(),
+      home:OptionsPage(),
     );
   }
 }
