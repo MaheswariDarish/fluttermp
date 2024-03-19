@@ -27,7 +27,7 @@ class _StartScreenState extends State<StartingScreen> {
   Widget build(context) {
     return ListView(
       children: [
-        const SizedBox(height: 50),
+        const SizedBox(height: 35),
         Container(
           child: CircleAvatar(
             radius: 70,
@@ -53,9 +53,9 @@ class _StartScreenState extends State<StartingScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 100),
+        const SizedBox(height: 50),
         Padding(
-          padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+          padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
           child: Column(
             children: [
               GridView.builder(
@@ -82,7 +82,7 @@ class _StartScreenState extends State<StartingScreen> {
                         //child:
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 35, vertical: 5),
+                              horizontal: 40, vertical: 20),
                           child: nameicon[index],
                         ),
                         // ),
@@ -109,7 +109,6 @@ class _StartScreenState extends State<StartingScreen> {
             ],
           ),
         ),
-        SizedBox(height: 34),
       ],
     );
   }

@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/ScreenMap.dart';
 import 'package:flutter_application_1/screens/ScreenNotifications.dart';
 import 'package:flutter_application_1/screens/StartingScreen.dart';
+import 'package:get/get.dart';
 
 class ScreenHome extends StatefulWidget {
   const ScreenHome({Key? key}) : super(key: key);
@@ -27,13 +29,70 @@ class _ScreenHomeState extends State<ScreenHome> {
         title: Text(screenNow == "StartingScreen" ? "Home" : "IHRD"),
         centerTitle: true,
       ),
-      drawer: const Drawer(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [],
-        ),
-      ),
+      drawer: Drawer(
+          child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            color:
+                Theme.of(context).appBarTheme.backgroundColor!.withOpacity(0.8),
+            child: ListTile(
+              title: const Text(
+                "About",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/about');
+              },
+            ),
+          ),
+          Container(
+            color:
+                Theme.of(context).appBarTheme.backgroundColor!.withOpacity(0.8),
+            child: ListTile(
+              title: const Text(
+                "Profile",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+
+                Navigator.pushNamed(context, '/profile');
+              },
+            ),
+          ),
+          Container(
+            color:
+                Theme.of(context).appBarTheme.backgroundColor!.withOpacity(0.8),
+            child: ListTile(
+              title: const Text(
+                "Settings",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/settings');
+              },
+            ),
+          )
+        ],
+      )),
       body: activeScreen,
       bottomNavigationBar: BottomAppBar(
         shadowColor: Colors.black,

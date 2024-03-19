@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/about.dart';
+import 'package:flutter_application_1/profile.dart';
 import 'package:flutter_application_1/screens/SreenHome.dart';
+import 'package:flutter_application_1/settings.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -17,6 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      routes: {
+        '/about': (context) => About(),
+        '/profile': (context) => Profile(),
+        '/settings': (context) => Settings()
+      },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData().copyWith(
