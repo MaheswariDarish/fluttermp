@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/gridScreens/NoticePage.dart';
 import 'package:flutter_application_1/screens/ScreenMap.dart';
 import 'package:flutter_application_1/screens/ScreenNotifications.dart';
+
 import 'package:flutter_application_1/screens/StartingScreen.dart';
-import 'package:get/get.dart';
 
 class ScreenHome extends StatefulWidget {
   const ScreenHome({Key? key}) : super(key: key);
@@ -15,11 +15,27 @@ class ScreenHome extends StatefulWidget {
 class _ScreenHomeState extends State<ScreenHome> {
   Widget? activeScreen;
   String? screenNow = "StartingScreen";
+  var pageIndex = 0;
 
   @override
   void initState() {
     activeScreen = StartingScreen();
     super.initState();
+  }
+
+  void _selectPage(int index) {
+    setState(() {
+      if (index == 0) {
+        activeScreen = StartingScreen();
+        pageIndex = index;
+      } else if (index == 1) {
+        activeScreen = ScreenNotifications();
+        pageIndex = index;
+      } else if (index == 2) {
+        activeScreen = ScreenMap();
+        pageIndex = index;
+      }
+    });
   }
 
   @override
@@ -94,62 +110,17 @@ class _ScreenHomeState extends State<ScreenHome> {
         ],
       )),
       body: activeScreen,
-      bottomNavigationBar: BottomAppBar(
-        shadowColor: Colors.black,
-        child: Container(
-          height: 80,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                padding: EdgeInsets.all(10),
-                onPressed: () {
-                  setState(() {
-                    screenNow = "StartingScreen";
-                    activeScreen = StartingScreen();
-                  });
-                },
-                icon: const Icon(
-                  Icons.home,
-                  color: Colors.white,
-                ),
-              ),
-              IconButton(
-                padding: EdgeInsets.all(10),
-                onPressed: () {
-                  setState(() {
-                    screenNow = "ScreenNotification";
-                    activeScreen = ScreenNotifications();
-                  });
-                },
-                icon: const Icon(
-                  Icons.notifications,
-                  color: Colors.white,
-                ),
-              ),
-              IconButton(
-                padding: EdgeInsets.all(10),
-                onPressed: () {
-                  setState(() {
-                    screenNow = "ScreenMap";
-                    activeScreen = ScreenMap();
-                  });
-                },
-                icon: const Icon(
-                  Icons.location_pin,
-                  color: Colors.white,
-                ),
-              )
-            ],
-          ),
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
+        onTap: _selectPage,
+        currentIndex: pageIndex,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notification_add), label: 'Notification'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.location_pin), label: 'Location')
+        ],
       ),
     );
   }

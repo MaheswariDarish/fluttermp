@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/NoticePage.dart';
+import 'package:flutter_application_1/screens/gridScreens/NoticePage.dart';
 import 'package:http/http.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:get/get.dart';
@@ -24,4 +24,3 @@ class PdfViewerSample extends StatelessWidget {
     );
   }
 }
-

@@ -4,8 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/about.dart';
 import 'package:flutter_application_1/profile.dart';
 import 'package:flutter_application_1/screens/SreenHome.dart';
+import 'package:flutter_application_1/screens/StartingScreen.dart';
 import 'package:flutter_application_1/settings.dart';
 import 'package:get/get.dart';
+import 'package:flutter_application_1/test.dart';
 
 void main() {
   runApp(MyApp());

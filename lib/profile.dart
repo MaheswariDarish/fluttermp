@@ -26,7 +26,7 @@ class Profile extends StatelessWidget {
             ),
           ),
           Text(
-            "Mr Babu",
+            "Username",
             style: TextStyle(fontSize: 30),
           )
         ],

@@ -1,31 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import 'package:flutter_application_1/data/grid_items_data.dart';
+
+import 'package:flutter_application_1/widgets/grid_button.dart';
 
 class StartingScreen extends StatefulWidget {
+  const StartingScreen({super.key});
   State<StartingScreen> createState() {
     return _StartScreenState();
   }
 }
 
 class _StartScreenState extends State<StartingScreen> {
-  List<Icon> nameicon = [
-    const Icon(Icons.message, color: Colors.black, size: 30),
-    const Icon(Icons.people, color: Colors.black, size: 30),
-    const Icon(Icons.info_outline, color: Colors.black, size: 30),
-    const Icon(Icons.school, color: Colors.black, size: 30),
-    const Icon(Icons.how_to_reg, color: Colors.black, size: 30),
-    const Icon(Icons.work_outline, color: Colors.black, size: 30),
-  ];
-  List names = [
-    "Message",
-    "Employment",
-    "Public Notice",
-    "Students Notice",
-    "Tenders",
-    "Admissions"
-  ];
+  void openScreen(Widget screen) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => screen));
+  }
 
   Widget build(context) {
-    return ListView(
+    return Column(
       children: [
         const SizedBox(height: 35),
         Container(
@@ -42,7 +35,7 @@ class _StartScreenState extends State<StartingScreen> {
           ),
         ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
         const Text(
           "IHRD",
@@ -53,60 +46,26 @@ class _StartScreenState extends State<StartingScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 50),
-        Padding(
-          padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
-          child: Column(
-            children: [
-              GridView.builder(
-                itemCount: names.length,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        const SizedBox(height: 150),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: GridView(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  childAspectRatio: 1.1,
-                ),
-                itemBuilder: (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    height: 95,
-                    width: 250,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF2D5C4),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Stack(
-                      children: [
-                        //Center(
-                        //child:
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 20),
-                          child: nameicon[index],
-                        ),
-                        // ),
-                        Positioned(
-                          bottom: 15,
-                          left: 0,
-                          right: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Text(
-                              names[index],
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ],
+                  childAspectRatio: 1.5,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20),
+              children: [
+                for (final item in gridItemsData)
+                  GridButton(
+                    icon: item.icon,
+                    title: item.title,
+                    screen: item.screen,
+                    openScreen: openScreen,
+                  )
+              ],
+            ),
           ),
         ),
       ],
