@@ -46,69 +46,96 @@ class _ScreenHomeState extends State<ScreenHome> {
         centerTitle: true,
       ),
       drawer: Drawer(
+          backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
           child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            color:
-                Theme.of(context).appBarTheme.backgroundColor!.withOpacity(0.8),
-            child: ListTile(
-              title: const Text(
-                "About",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
-                ),
-                textAlign: TextAlign.center,
+            padding: EdgeInsets.zero,
+            children: [
+              SizedBox(
+                height: 20,
               ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/about');
-              },
-            ),
-          ),
-          Container(
-            color:
-                Theme.of(context).appBarTheme.backgroundColor!.withOpacity(0.8),
-            child: ListTile(
-              title: const Text(
-                "Profile",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
+              Container(
+                color: Theme.of(context)
+                    .appBarTheme
+                    .backgroundColor!
+                    .withOpacity(0.8),
+                child: ListTile(
+                  title: const Text(
+                    "About",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/about');
+                  },
                 ),
-                textAlign: TextAlign.center,
               ),
-              onTap: () {
-                Navigator.pop(context);
+              Container(
+                color: Theme.of(context)
+                    .appBarTheme
+                    .backgroundColor!
+                    .withOpacity(0.8),
+                child: ListTile(
+                  title: const Text(
+                    "Profile",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
 
-                Navigator.pushNamed(context, '/profile');
-              },
-            ),
-          ),
-          Container(
-            color:
-                Theme.of(context).appBarTheme.backgroundColor!.withOpacity(0.8),
-            child: ListTile(
-              title: const Text(
-                "Settings",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
+                    Navigator.pushNamed(context, '/profile');
+                  },
                 ),
-                textAlign: TextAlign.center,
               ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/settings');
-              },
-            ),
-          )
-        ],
-      )),
+              Container(
+                color: Theme.of(context)
+                    .appBarTheme
+                    .backgroundColor!
+                    .withOpacity(0.8),
+                child: ListTile(
+                  title: const Text(
+                    "Settings",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/settings');
+                  },
+                ),
+              ),
+              Container(
+                color: Theme.of(context)
+                    .appBarTheme
+                    .backgroundColor!
+                    .withOpacity(0.8),
+                child: ListTile(
+                  title: const Text(
+                    "Institutions",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/institutions');
+                  },
+                ),
+              )
+            ],
+          )),
       body: activeScreen,
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,

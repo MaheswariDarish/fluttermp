@@ -24,13 +24,10 @@ class GridButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: Theme.of(context).appBarTheme.foregroundColor,
         ),
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(5),
         child: Column(
           children: [
             Icon(icon),
-            const SizedBox(
-              height: 5,
-            ),
             Text(
               title,
               softWrap: true,

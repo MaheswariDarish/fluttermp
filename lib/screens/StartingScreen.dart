@@ -49,7 +49,7 @@ class _StartScreenState extends State<StartingScreen> {
         const SizedBox(height: 150),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             child: GridView(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,

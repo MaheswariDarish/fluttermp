@@ -30,7 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_maps_flutter: ^2.2.0
   flutter_pdfview: ^1.3.2
   file_picker: ^6.1.1
   path: ^1.7.0
@@ -48,6 +47,12 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^24.2.8
   get: ^4.6.6
   google_maps_flutter: ^2.6.0
+  carousel_slider: ^4.2.1
+  firebase_messaging: ^14.7.21
+  cloud_firestore: ^4.15.10
+  google_fonts: ^6.2.0
+  page_transition: ^2.1.0
+  webview_flutter: ^4.7.0
 
 dev_dependencies:
   flutter_test:
@@ -73,7 +78,15 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/ihrd_logo.png
+    - assets/ihrd_logo.png
+    - assets/bannerImages/s1.jpg
+    - assets/bannerImages/s2.jpg
+    - assets/bannerImages/s3.jpg
+    - assets/bannerImages/s4.jpg
+    - assets/bannerImages/s5.jpg
+    - assets/ihrd_logo.png
+    - assets/box/box1.png
+    - assets/pic/img1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
