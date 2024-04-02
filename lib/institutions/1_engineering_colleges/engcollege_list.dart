@@ -54,16 +54,26 @@ class _EngCollegeListState extends State<EngCollegeList> {
     'http://www.ceattingal.ac.in/',
     'https://www.cepoonjar.ac.in/',
   ];
-
+   final List <String> imgurl=[
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
+       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
-          iconTheme: const IconThemeData(color: Colors.grey, size: 28),
+          iconTheme: const IconThemeData(color: Color.fromARGB(255, 243, 175, 175), size: 28),
           leading: IconButton(
             icon: const Icon(
               Icons.arrow_back,
@@ -105,6 +115,7 @@ class _EngCollegeListState extends State<EngCollegeList> {
                                 mainAxisSpacing: 20),
                         itemBuilder: (context, index) {
                           return CollegeTile(
+                              imagepath: imgurl[index],
                               name: engineering_college_list[index].name,
                               websiteURL: website_list[index],
                               page: engineering_college_list[index].page);

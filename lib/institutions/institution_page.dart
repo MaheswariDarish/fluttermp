@@ -35,19 +35,17 @@ class InstitutionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Colors.transparent,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             //Size of appbar
-            const SizedBox(height: kToolbarHeight + 54),
+            const SizedBox(height: kToolbarHeight +54),
 
             //heading
             const Text(
               "IHRD Institutions",
-              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
@@ -56,20 +54,45 @@ class InstitutionsPage extends StatelessWidget {
             ),
 
             //gridview
-            GridView.builder(
+            ListView.builder(
               itemCount: institutions.length,
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisSpacing: 15,
-                  childAspectRatio: 1,
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 20),
+              
               itemBuilder: (context, index) {
-                return CardGridView(
-                  name: institutions[index].name,
-                  page: institutions[index].page,
-                );
+                // return CardGridView(
+                //   name: institutions[index].name,
+                //   page: institutions[index].page,
+                // );
+                return Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8),
+                  child:InkWell(
+  onTap: () {
+     Navigator.push(
+        context,
+         MaterialPageRoute(
+          builder: (context) => institutions[index].page,
+        ),
+      );
+  },
+  child: Container(
+    height:50,
+    decoration: BoxDecoration(
+       borderRadius: BorderRadius.circular(10), 
+      color: Color.fromARGB(255, 242, 233, 233), 
+     ),
+    child: Row(
+      children: [
+        Expanded(
+          child: Center(child: Text('${institutions[index].name}',style:TextStyle(fontWeight: FontWeight.w500,
+                ))), 
+        ),
+        Icon(Icons.arrow_forward),
+      ],
+    ),
+  ),)
+);
+
               },
             ),
           ],

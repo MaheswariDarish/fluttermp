@@ -7,12 +7,14 @@ import 'package:page_transition/page_transition.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CollegeTile extends StatelessWidget {
+  final String imagepath;
   final String name;
   final String websiteURL;
   final Widget page;
 
   const CollegeTile(
       {super.key,
+      required this.imagepath,
       required this.name,
       required this.page,
       required this.websiteURL});
@@ -32,7 +34,7 @@ class CollegeTile extends StatelessWidget {
         child: Container(
           // color: Colors.grey,
           decoration: BoxDecoration(
-              color: const Color(0xffF7F7F7),
+              color: Color.fromARGB(255, 248, 219, 219),
               borderRadius: BorderRadius.circular(15)),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
@@ -46,14 +48,15 @@ class CollegeTile extends StatelessWidget {
                     Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                          color: kDarkBlue,
+                          
                           borderRadius: BorderRadius.circular(10)),
                       height: 50,
                       width: 50,
-                      child: const Icon(
-                        Icons.menu_book_outlined,
-                        color: Colors.amberAccent,
-                      ),
+                      child: Image(
+              image: AssetImage(imagepath), 
+              width: 40, 
+              height: 60, 
+            ),
                     )
                   ],
                 ),
@@ -73,7 +76,7 @@ class CollegeTile extends StatelessWidget {
                     Text(
                       "IHRD",
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontSize: MediaQuery.of(context).size.width * 0.03,
                       ),
                     )
