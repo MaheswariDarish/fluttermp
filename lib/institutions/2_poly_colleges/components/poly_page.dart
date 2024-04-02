@@ -69,7 +69,7 @@ class _PolyPageState extends State<PolyPage> {
       boxShadow: const [
         BoxShadow(
           color: Colors.black12,
-          blurRadius: 10,
+          blurRadius:10,
           offset: Offset(0, 5),
         ),
       ],
@@ -87,7 +87,7 @@ class _PolyPageState extends State<PolyPage> {
             //Statusbar height
             toolbarHeight: MediaQuery.of(context).padding.top + 40,
             backgroundColor: _isScrolled
-                ? Color.fromRGBO(11, 162, 213, 0.847)
+                ? Color.fromRGBO(107, 3, 74, 0.843)
                 : Colors.transparent,
             expandedHeight: _appBarHeight,
             pinned: true,
