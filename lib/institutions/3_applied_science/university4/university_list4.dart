@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/colors.dart';
+import 'package:flutter_application_1/institutions/2_poly_colleges/components/PolyClgTile.dart';
 //This dart file is used for displaying the list of engineering colleges of IHRD
 
 //importing the applied_science_list
@@ -42,54 +43,82 @@ class _ASUniversityList4State extends State<ASUniversityList4> {
     });
   }
 
+  final List<String> imgurl = [
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: AppBar(
+          elevation: 0,
+          backgroundColor: Color.fromARGB(255, 137, 7, 57),
+          iconTheme: const IconThemeData(color: Color.fromARGB(255, 246, 245, 245), size: 28),
           leading: IconButton(
             icon: const Icon(
               Icons.arrow_back,
-              color: Colors.white,
-              size: 24,
             ),
             onPressed: () {
               // Navigate back when the back button is pressed
               Navigator.of(context).pop();
             },
           ),
-          backgroundColor: const Color(0xFF1C8EE1),
+          title: Text(
+                    "College of Applied Science",
+                    style: TextStyle(
+                      fontSize: mainheading,
+                      fontWeight: mainheadingweight,
+                      color: Colors.white,
+                    ),
+                  ),
+                  centerTitle: true,
         ),
       ),
+      backgroundColor: Colors.white,
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: bgColor,
-        ),
+        padding: const EdgeInsets.only(left: 18, right: 18),
         child: SingleChildScrollView(
             controller: _scrollController,
             child: Column(
               children: <Widget>[
+                SizedBox(height: 10,),
+                Text("Kannur University",
+                style: TextStyle(
+                      fontSize: 20,
+                      fontWeight:FontWeight.normal ,
+                      color: secondaryColor,
+                    ),),
                 const Padding(
                   padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    'Kannur University affiliated Colleges',
-                    style: TextStyle(
-                      fontSize: mainheading,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.8,
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: applied_science_university4_list.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Placeholder();
-                    },
-                  ),
-                ),
+                 SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.8,
+                    child: GridView.builder(
+                        itemCount: applied_science_university4_list.length,
+                        shrinkWrap: true,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                childAspectRatio: 16 / 4,
+                                crossAxisCount: 1,
+                                mainAxisSpacing: 20),
+                        itemBuilder: (context, index) {
+                          return PolyClgTile(
+                              imagepath: imgurl[index],
+                              name: applied_science_university4_list[index].name,
+                            
+                              page: applied_science_university4_list[index].page);
+                        })),
               ],
             )),
       ),

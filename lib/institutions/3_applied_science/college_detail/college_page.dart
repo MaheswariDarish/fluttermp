@@ -89,7 +89,7 @@ class _ASCollegePageState extends State<ASCollegePage> {
             //Statusbar height
             toolbarHeight: kToolbarHeight,
             backgroundColor:
-                _isScrolled ? const Color(0xFF1C8EE1) : Colors.transparent,
+                _isScrolled ? Color.fromARGB(255, 206, 17, 103) : Colors.transparent,
             expandedHeight: _appBarHeight,
             pinned: true,
             flexibleSpace: LayoutBuilder(

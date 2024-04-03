@@ -39,7 +39,7 @@ class AppliedScienceUniversities extends StatelessWidget {
   AppliedScienceUniversities({super.key});
 
   @override
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     return Scaffold(
       //Appbar
       appBar: PreferredSize(
@@ -56,7 +56,7 @@ class AppliedScienceUniversities extends StatelessWidget {
               Navigator.of(context).pop();
             },
           ),
-          backgroundColor: const Color(0xFF1C8EE1),
+          backgroundColor: Color.fromARGB(255, 123, 5, 78),
         ),
       ),
       //body of the page
@@ -90,13 +90,13 @@ class AppliedScienceUniversities extends StatelessWidget {
 
             Container(
               height: MediaQuery.of(context).size.height * 0.5,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               color: Colors.transparent,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 16,
-                  mainAxisSpacing: 10,
+                  mainAxisSpacing: 30,
                   childAspectRatio: 1.5,
                 ),
                 itemCount: universities.length,

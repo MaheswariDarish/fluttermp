@@ -87,7 +87,15 @@ flutter:
     - assets/ihrd_logo.png
     - assets/box/box1.png
     - assets/pic/img1.png
-    - assets/engclgimg/mec.png 
+    - assets/engclgimg/mec.png
+    - assets/engclgimg/cec.png    
+    - assets/engclgimg/cea.png
+    - assets/engclgimg/kp.png
+    - assets/engclgimg/ceca.png
+    - assets/engclgimg/cek.png
+    - assets/engclgimg/ko.png
+    - assets/engclgimg/at.png
+    - assets/engclgimg/pjr.png 
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

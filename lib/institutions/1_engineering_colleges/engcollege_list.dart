@@ -56,23 +56,23 @@ class _EngCollegeListState extends State<EngCollegeList> {
   ];
    final List <String> imgurl=[
     'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
-    'assets/engclgimg/mec.png',
+    'assets/engclgimg/cec.png',
+    'assets/engclgimg/cea.png',
+    'assets/engclgimg/kp.png',
+    'assets/engclgimg/ceca.png',
+    'assets/engclgimg/cek.png',
+    'assets/engclgimg/ko.png',
+    'assets/engclgimg/at.png',
+    'assets/engclgimg/pjr.png',
    ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 126, 32, 76),
           iconTheme: const IconThemeData(color: Color.fromARGB(255, 243, 175, 175), size: 28),
           leading: IconButton(
             icon: const Icon(
@@ -83,6 +83,15 @@ class _EngCollegeListState extends State<EngCollegeList> {
               Navigator.of(context).pop();
             },
           ),
+          title: Text(
+                    "Engineering Colleges",
+                    style: TextStyle(
+                      fontSize: mainheading,
+                      fontWeight: mainheadingweight,
+                      color: Colors.white,
+                    ),
+                  ),
+                  centerTitle: true,
         ),
       ),
       backgroundColor: Colors.white,
@@ -94,14 +103,7 @@ class _EngCollegeListState extends State<EngCollegeList> {
               children: <Widget>[
                 const Padding(
                   padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "Engineering Colleges",
-                    style: TextStyle(
-                      fontSize: mainheading,
-                      fontWeight: mainheadingweight,
-                      color: secondaryColor,
-                    ),
-                  ),
+                  
                 ),
                 SizedBox(
                     height: MediaQuery.of(context).size.height * 0.8,
