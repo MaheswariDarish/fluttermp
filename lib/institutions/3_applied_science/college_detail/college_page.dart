@@ -79,17 +79,17 @@ class _ASCollegePageState extends State<ASCollegePage> {
         ));
 
     return Scaffold(
-      appBar: AppBar(),
+      
       body: Container(
         decoration: const BoxDecoration(
-          gradient: bgColor,
+         // gradient: bgColor,
         ),
         child: CustomScrollView(controller: _scrollController, slivers: [
           SliverAppBar(
             //Statusbar height
             toolbarHeight: kToolbarHeight,
             backgroundColor:
-                _isScrolled ? Color.fromARGB(255, 206, 17, 103) : Colors.transparent,
+                _isScrolled ? Color.fromARGB(255, 114, 8, 68) : Colors.transparent,
             expandedHeight: _appBarHeight,
             pinned: true,
             flexibleSpace: LayoutBuilder(

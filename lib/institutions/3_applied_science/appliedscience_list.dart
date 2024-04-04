@@ -62,7 +62,7 @@ class AppliedScienceUniversities extends StatelessWidget {
       //body of the page
       body: Container(
         decoration: const BoxDecoration(
-          gradient: bgColor,
+          //gradient: bgColor,
         ),
         child: Column(
           children: [
@@ -96,7 +96,7 @@ class AppliedScienceUniversities extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 16,
-                  mainAxisSpacing: 30,
+                  mainAxisSpacing: 35,
                   childAspectRatio: 1.5,
                 ),
                 itemCount: universities.length,

@@ -11,7 +11,7 @@ class CardGridView extends StatelessWidget {
   const CardGridView({super.key, required this.name, required this.page});
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return InkWell(
       //Navigate with transition from right to left
       onTap: () => {
@@ -26,7 +26,14 @@ class CardGridView extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: kLightBlue,
+         color: Colors.white,
+      boxShadow: const [
+        BoxShadow(
+          color: Colors.black12,
+          blurRadius:10,
+          offset: Offset(0, 5),
+        ),
+      ],
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 20),
@@ -34,13 +41,19 @@ class CardGridView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                name,
-                maxLines: 3,
-                softWrap: true,
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: secondaryColor,
+              
+              Container(
+                 constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width * 0.5, // Set max width
+              ),
+                child: Text(
+                  name,
+                  maxLines: 3,
+                  softWrap: true,
+                  style: const TextStyle(
+                    fontSize: 17,
+                    color: secondaryColor,
+                  ),
                 ),
               ),
               // Row(

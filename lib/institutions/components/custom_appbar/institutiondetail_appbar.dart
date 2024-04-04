@@ -11,6 +11,7 @@ class CustomAppBar extends StatelessWidget {
       {super.key, required this.collegeName, required this.collegeAddress});
 
   @override
+   @override
   Widget build(BuildContext context) {
     return Container(
       height: 250.0,
@@ -19,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFf9379F2), Color(0xFF1C8EE1)],
+          colors: [Color.fromARGB(255, 145, 7, 110), Color.fromARGB(255, 99, 6, 57)],
         ),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40.0),
