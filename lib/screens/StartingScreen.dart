@@ -26,7 +26,7 @@ class _StartScreenState extends State<StartingScreen> {
             radius: 70,
             backgroundColor: Theme.of(context).appBarTheme.foregroundColor,
             child: Image.asset(
-              'assets/images/ihrd_logo.png',
+              'assets/ihrd_logo.png',
               fit: BoxFit.contain,
               height: 90,
               width: 90,
@@ -46,7 +46,7 @@ class _StartScreenState extends State<StartingScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 150),
+        const SizedBox(height: 80),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(10),
@@ -55,7 +55,7 @@ class _StartScreenState extends State<StartingScreen> {
                   crossAxisCount: 3,
                   childAspectRatio: 1.5,
                   crossAxisSpacing: 20,
-                  mainAxisSpacing: 20),
+                  mainAxisSpacing: 40),
               children: [
                 for (final item in gridItemsData)
                   GridButton(

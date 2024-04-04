@@ -3,7 +3,7 @@ import 'package:flutter_application_1/screens/gridScreens/NoticePage.dart';
 import 'package:flutter_application_1/screens/ScreenMap.dart';
 import 'package:flutter_application_1/screens/ScreenNotifications.dart';
 
-import 'package:flutter_application_1/screens/StartingScreen.dart';
+  import 'package:flutter_application_1/screens/StartingScreen.dart';
 
 class ScreenHome extends StatefulWidget {
   const ScreenHome({Key? key}) : super(key: key);
