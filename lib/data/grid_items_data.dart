@@ -2,7 +2,7 @@ import 'package:flutter_application_1/models/grid_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/gridScreens/AdmissionsScreen.dart';
 import 'package:flutter_application_1/screens/gridScreens/EmploymentScreen.dart';
-import 'package:flutter_application_1/screens/gridScreens/MessageScreen.dart';
+import 'package:flutter_application_1/screens/gridScreens/EnquiryForm.dart';
 import 'package:flutter_application_1/screens/gridScreens/NoticePage.dart';
 import 'package:flutter_application_1/screens/gridScreens/StudentNoticeScreen.dart';
 import 'package:flutter_application_1/screens/gridScreens/TendersScreen.dart';
@@ -11,8 +11,8 @@ final gridItemsData = [
   GridItem(
       id: 'A',
       icon: Icons.message,
-      title: 'Message',
-      screen: const MessageScreen()),
+      title: 'Enquiry',
+      screen: EnquiryForm()),
   GridItem(
       id: 'B',
       icon: Icons.people,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //This dart file is used for displaying the list of engineering colleges of IHRD
-
+import 'package:flutter_application_1/institutions/2_poly_colleges/components/PolyClgTile.dart';
 //importing the engineering_college_list
 import 'package:flutter_application_1/college_list/Engineering/college_list.dart';
 import 'package:flutter_application_1/colors.dart';
@@ -116,10 +116,10 @@ class _EngCollegeListState extends State<EngCollegeList> {
                                 crossAxisCount: 1,
                                 mainAxisSpacing: 20),
                         itemBuilder: (context, index) {
-                          return CollegeTile(
+                          return PolyClgTile(
                               imagepath: imgurl[index],
                               name: engineering_college_list[index].name,
-                              websiteURL: website_list[index],
+                              //websiteURL: website_list[index],
                               page: engineering_college_list[index].page);
                         })),
               ],
