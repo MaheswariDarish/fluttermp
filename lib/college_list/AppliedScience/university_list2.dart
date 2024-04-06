@@ -21,7 +21,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '0468 2382280',
         mobile: '8547005074',
         email: 'caskonni@ihrd.ac.in',
-        website: 'caskonni.ihrd.ac.in',
+        website: 'https://caskonni.ihrd.ac.in/',
         nearestRailwayStation: 'Avaneeswaram in Punalur Kollam line - 35 Km',
         nearestBusStand: 'Konni - 10 Km',
         courses: [
@@ -47,7 +47,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '0469-2681426',
         mobile: '8547005033',
         email: 'casmallappally@ihrd.ac.in',
-        website: 'casmallappally.ihrd.ac.in',
+        website: 'https://casmallappally.ihrd.ac.in/',
         nearestRailwayStation: 'Thiruvalla – 15 Km',
         nearestBusStand: 'Mallappally - 50 m',
         courses: [
@@ -69,7 +69,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04735-296833',
         mobile: '9747190302',
         email: 'casayroor@gmail.com',
-        website: 'caskonni.ihrd.ac.in',
+        website: 'https://casayroor.ihrd.ac.in/',
         nearestRailwayStation: '', // Update with the nearest railway station
         nearestBusStand: '', // Update with the nearest bus stand
         courses: [
@@ -83,7 +83,7 @@ final List<InstitutionObject> applied_science_university2_list = [
   ),
 //4
   const InstitutionObject(
-    name: 'College of Applied Science Adoor',
+    name: 'College of Applied Science Puthupally',
     page: ASCollegePage(
       college: AppliedScienceCollege(
         name: 'College of Applied Science Puthuppally',
@@ -94,7 +94,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04734-224076', // You can update this if needed
         mobile: '8547005040',
         email: 'caspayyappady@ihrd.ac.in',
-        website: 'www.caspayyappady.in',
+        website: 'https://casputhuppally.ihrd.ac.in/',
         nearestRailwayStation: 'Kottayam - 10 KM',
         nearestBusStand: 'Puthuppally – 3 KM',
         courses: [
@@ -122,7 +122,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04862257811, 2257447',
         mobile: '8547005047',
         email: 'casthodupuzha@ihrd.ac.in',
-        website: 'casthodupuzha.ihrd.ac.in',
+        website: 'https://casthodupuzha.ihrd.ac.in/',
         nearestRailwayStation: 'Aluva - 50 KM',
         nearestBusStand: 'Thodupuzha - 1 KM',
         courses: [
@@ -149,7 +149,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04829-264177',
         mobile: '8547005049',
         email: 'caskaduthuruthi@ihrd.ac.in',
-        website: 'caskaduthuruthy.ihrd.ac.in',
+        website: 'https://caskaduthuruthy.ihrd.ac.in/',
         nearestRailwayStation: 'Appanchira - 9 Km',
         nearestBusStand: 'Kaduthuruthy - 4 Km',
         courses: [
@@ -173,7 +173,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04828-206480, 04828-206600',
         mobile: '8547005075',
         email: 'caskanjirappally@ihrd.ac.in',
-        website: 'caskanjirappally.ihrd.ac.in',
+        website: 'https://caskanjirappally.ihrd.ac.in/',
         nearestRailwayStation: 'Kottayam – 38 Km',
         nearestBusStand: 'Kanjirappally - 1.5 Km',
         courses: [
@@ -186,7 +186,7 @@ final List<InstitutionObject> applied_science_university2_list = [
   ),
 //8
   const InstitutionObject(
-    name: 'College of Applied Science Adoor',
+    name: 'College of Applied Science Peermade',
     page: ASCollegePage(
       college: AppliedScienceCollege(
         name: 'College of Applied Science Peermade',
@@ -197,7 +197,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04869-232373',
         mobile: '8547005041',
         email: 'caspeermade@ihrd.ac.in',
-        website: 'caspeermade.ihrd.ac.in',
+        website: 'https://caspeermade.ihrd.ac.in/',
         nearestRailwayStation: 'Kottayam - 73 KM',
         nearestBusStand: 'Mundakkayam – 20 KM',
         courses: [
@@ -223,7 +223,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '04868-250160',
         mobile: '8547005053',
         email: 'caskattappana@ihrd.ac.in',
-        website: 'caskattappana.ihrd.ac.in',
+        website: 'https://caskattappana.ihrd.ac.in/',
         nearestRailwayStation: 'Kottayam – 113 Km',
         nearestBusStand: 'Kattappana - 200 mts',
         courses: [
@@ -274,7 +274,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '0484-2487790',
         mobile: '8547005069',
         email: 'casputhenvelikkara@ihrd.ac.in',
-        website: 'casputhenvelikkara.ihrd.ac.in',
+        website: 'https://casputhenvelikkara.ihrd.ac.in/',
         nearestRailwayStation: 'Aluva - 23 KM',
         nearestBusStand: 'N.Paravoor - 10 KM',
         courses: [
@@ -288,7 +288,7 @@ final List<InstitutionObject> applied_science_university2_list = [
   ),
   //12
   const InstitutionObject(
-    name: 'College of Applied Science Adoor',
+    name: 'College of Applied Science Marayoor',
     page: ASCollegePage(
       college: AppliedScienceCollege(
         name: 'College of Applied Science Marayoor',
@@ -299,7 +299,7 @@ final List<InstitutionObject> applied_science_university2_list = [
         phone: '0468-253010',
         mobile: '8547005072',
         email: 'casmarayoor@ihrd.ac.in',
-        website: 'casmarayoor@ihrd.ac.in',
+        website: 'https://casmarayoor.ihrd.ac.in/index.php',
         nearestRailwayStation: 'Udumalpet',
         nearestBusStand: 'Kovilkadavu',
         courses: [

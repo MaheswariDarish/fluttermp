@@ -21,7 +21,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '04734-224076',
         mobile: '8547005045',
         email: 'casadoor@ihrd.ac.in',
-        website: 'www.casadoor.in',
+        website: 'https://www.casadoor.in/',
         nearestRailwayStation: 'Chengannur - 25 Km',
         nearestBusStand: 'Adoor - 1 Km',
         courses: [
@@ -52,7 +52,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '0471-2234373, 0471-2234374',
         mobile: '8547005065',
         email: 'casdhanuvachapuram@ihrd.ac.in',
-        website: 'casdvpm.ihrd.ac.in',
+        website: 'https://casdvpm.ihrd.ac.in/',
         nearestRailwayStation: 'Dhanuvachapuram - 1 KM',
         nearestBusStand: 'Dhanuvachapuram – 100 M',
         courses: [
@@ -79,7 +79,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '0479-2485370, 0479-2485852',
         mobile: '8547005018',
         email: 'casharipad@ihrd.ac.in',
-        website: 'caskarthikapally.ihrd.ac.in',
+        website: 'https://caskarthikapally.ihrd.ac.in/',
         nearestRailwayStation: 'Haripad - 3.6 Km',
         nearestBusStand: 'Haripad - 3.3 Km',
         courses: [
@@ -108,7 +108,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '04734-272320',
         mobile: '8547005024',
         email: 'caskalanjoor@ihrd.ac.in',
-        website: 'caskalanjoor.ihrd.ac.in',
+        website: 'https://caskalanjoor.ihrd.ac.in/',
         nearestRailwayStation: 'Avaneeswaram - 5 Km',
         nearestBusStand: 'Kalanjoor - 1 Km',
         courses: [
@@ -133,7 +133,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '',
         mobile: '8089754259',
         email: 'caskottarakkara.ihrd@gmail.com',
-        website: '',
+        website: 'https://caskottarakkara.ihrd.ac.in/',
         nearestRailwayStation: 'Kollam - 20 Km',
         nearestBusStand: 'Kottarakkara - 3.3 Km',
         courses: [
@@ -160,7 +160,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '0474-2580866',
         mobile: '8547005066',
         email: 'caskundara@ihrd.ac.in',
-        website: 'caskundara.ihrd.ac.in',
+        website: 'https://caskundara.ihrd.ac.in/',
         nearestRailwayStation: 'Kundara - 0.5 Km',
         nearestBusStand: 'Kundara - 1 Km',
         courses: [
@@ -188,7 +188,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '0479-2304494',
         mobile: '8547005046',
         email: 'casmavelikkara@ihrd.ac.in',
-        website: 'www.casmvk.kerala.gov.in',
+        website: 'https://casmvk.kerala.gov.in',
         nearestRailwayStation: 'Mavelikkara - 2 Km',
         nearestBusStand: 'Mavelikkara - 1 Km',
         courses: [
@@ -217,7 +217,7 @@ final List<InstitutionObject> applied_science_university1_list = [
         phone: '0479-2456499',
         mobile: '9747190302',
         email: 'casperissery@ihrd.ac.in',
-        website: 'casperissery.ihrd.ac.in',
+        website: 'https://casperissery.ihrd.ac.in/',
         nearestRailwayStation: 'Chengannur - 2 Km',
         nearestBusStand: 'Chengannur - 2 Km',
         courses: [

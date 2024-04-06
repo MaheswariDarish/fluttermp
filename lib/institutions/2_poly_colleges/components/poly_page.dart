@@ -3,6 +3,10 @@ import 'package:flutter_application_1/institutions/components/custom_appbar/inst
 import 'package:flutter_application_1/institutions/institution_class.dart';
 import 'package:flutter_application_1/institutions/components/info_card.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:flutter_application_1/LaunchURL/launch_url.dart';
+
+
 
 class PolyPage extends StatefulWidget {
   final Poly college;
@@ -188,21 +192,39 @@ class _PolyPageState extends State<PolyPage> {
                     title: "Nearest Stations",
                     icon: const Icon(Icons.map)),
                 const SizedBox(height: 20),
-                // "Contact Now" Button
-                Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _showContactOptionsDialog(context);
-                    },
-                    child: Text('Contact Now'),
-                  ),
-                ),
-                const SizedBox(height: 20),
               ],
             ),
           ),
         ],
       ),
+      bottomNavigationBar: BottomAppBar(
+  child: Padding(
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        ElevatedButton(
+          onPressed: () {
+            _showContactOptionsDialog(context);
+          },
+          child: Text('Contact Now'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+           Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LaunchURL(url: widget.college.website),
+              ),
+            );
+          },
+          child: Text('Visit Website'),
+        ),
+      ],
+    ),
+  ),
+),
+
     );
   }
 
@@ -227,6 +249,13 @@ class _PolyPageState extends State<PolyPage> {
                   child: Text('Email'),
                   onTap: () {
                     _launchEmail(widget.college.email);
+                    Navigator.of(context).pop();
+                  },
+                ),Padding(padding: EdgeInsets.all(8.0)),
+                GestureDetector(
+                  child: Text('Call Mobile'),
+                  onTap: () {
+                    _launchPhone(widget.college.mobile);
                     Navigator.of(context).pop();
                   },
                 ),
