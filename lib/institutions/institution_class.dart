@@ -6,6 +6,7 @@ class InstitutionObject {
   const InstitutionObject({required this.name, required this.page});
 }
 
+
 class Poly {
   final String name,
       address,
