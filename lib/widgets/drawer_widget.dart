@@ -30,7 +30,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             ExpansionTile(
               title: Text(
-                'Institution',
+                'Institutions',
                 style: TextStyle(color: Colors.white, fontSize: 25), textAlign: TextAlign.center,
               ),
               children: <Widget>[
