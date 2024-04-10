@@ -9,10 +9,10 @@ import 'package:flutter_application_1/institutions/institution_class.dart';
 import 'package:flutter_application_1/institutions/5_model_finishing_college/college_detail/college_page.dart';
 
 //List of Fishing School
-final List<InstitutionObject> fishing_school_list = [
+final List<InstitutionObject> finishing_school_list = [
   //1
   const InstitutionObject(
-      name: 'Model Finishing School',
+      name: 'Model Finishing School Kaloor',
       page: FinishingSchoolPage(
           college: FinishingSchool(
         name: 'Model Finishing School',
@@ -21,24 +21,24 @@ final List<InstitutionObject> fishing_school_list = [
             'The Model Finishing School is a pioneering venture of the Government of Kerala, set up with the purpose of enhancing employability of qualified youths from the State of Kerala. A Government of Kerala (GoK) undertaking, the Model Finishing School is a joint initiative of the IT Department, GoK and the Institute of Human Resources Development (IHRD), with the support of industry-major Infosys. The IHRD is responsible for the day-to-day functioning of the institution.',
         phone: '+91-0484 2985252',
         email: 'mfsekm.ihrd@gmail.com',
-        website: 'www.mfsekm.org',
+        website: 'http://www.modelfinishingschool.org/',
         nearestRailwayStation: 'Kaloor Stadium, Kochi',
         nearestBusStand: '',
       ))),
 
   //2
   const InstitutionObject(
-      name: 'Model Finishing School',
+      name: 'Model Finishing School Thiruvananthpuram',
       page: FinishingSchoolPage(
           college: FinishingSchool(
         name: 'Model Finishing School',
-        address: 'Kaloor Stadium, Kochi, Kerala, India',
+        address: 'Model Finishing School Science & Technology Museum Campus PMG Junction, Vikas Bhavan Post Thiruvananthapuram - 695 033, Kerala',
         about:
             'The Model Finishing School is a pioneering venture of the Government of Kerala, set up with the purpose of enhancing employability of qualified youths from the State of Kerala. It is a Government of Kerala (GoK) undertaking and a joint initiative of the IT Department, GoK, and the Institute of Human Resources Development (IHRD), with the support of industry-major Infosys. The IHRD is responsible for the day-to-day functioning of the institution.',
         phone: '+91-0484 2985252',
-        email: 'mfsekm.ihrd@gmail.com',
-        website: 'www.mfsekm.org',
-        nearestRailwayStation: 'Kaloor Stadium, Kochi',
-        nearestBusStand: '',
+        email:'info@modelfinishingschool.org',
+        website: 'http://www.modelfinishingschool.org/',
+        nearestRailwayStation: 'Thiruvananthpuram- 1.5 KM',
+        nearestBusStand: 'Thiruvananthpuram- 1.5 KM',
       ))),
 ];

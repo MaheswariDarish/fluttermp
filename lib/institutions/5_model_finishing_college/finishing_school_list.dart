@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/college_list/Engineering/college_list.dart';
 import 'package:flutter_application_1/college_list/FinishingCollege/college_list.dart';
-
+import 'package:flutter_application_1/institutions/2_poly_colleges/components/PolyClgTile.dart';
 //importing constants
 import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_application_1/institutions/components/listview_card/listview_card.dart';
@@ -36,6 +36,15 @@ class _FinishingSchoolListState extends State<FinishingSchoolList> {
       });
     });
   }
+  final List<String> imgurl = [
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',
+  'assets/engclgimg/mec.png',];
 
   @override
   Widget build(BuildContext context) {
@@ -54,12 +63,12 @@ class _FinishingSchoolListState extends State<FinishingSchoolList> {
               Navigator.of(context).pop();
             },
           ),
-          backgroundColor: const Color(0xFF1C8EE1),
+          backgroundColor: const Color(0xFF920B41),
         ),
       ),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: bgColor,
+
         ),
         child: SingleChildScrollView(
             controller: _scrollController,
@@ -91,10 +100,12 @@ class _FinishingSchoolListState extends State<FinishingSchoolList> {
                   height: MediaQuery.of(context).size.height * 0.8,
                   child: ListView.builder(
                       shrinkWrap: true,
-                      itemCount: fishing_school_list.length,
+                      itemCount: finishing_school_list.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return Center(
-                          child: Text('.'),
+                        return PolyClgTile(
+                          imagepath: imgurl[index],
+                          name:finishing_school_list[index].name ,
+                          page:finishing_school_list[index].page ,
                         );
                       }),
                 ),

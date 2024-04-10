@@ -13,7 +13,7 @@ const regionalCentreList = [
             'IHRD established Regional Centre at Medical College Jn, Trivandrum Dist on 1995. Post Graduate Diploma courses, Diploma in Computer Application and various short term programmes catering to the need of unemployed youth are being conducted. Various special training programmes are also conducted.',
         phone: '0471-2550612, 2554947',
         email: 'rctrivandrum@ihrd.ac.in',
-        website: 'rctrivandrum.ihrd.ac.in',
+        website: 'https://ihrd.ac.in/',
         nearestRailwayStation: 'Trivandrum Central - 5 KM',
         nearestBusStand: 'Medical College Jn - 0.2 KM',
         coursesOffered:
@@ -32,7 +32,7 @@ const regionalCentreList = [
             'IHRD established Regional Centre at Edapally, Ernakulam Dist on 1995. Post Graduate Diploma courses, Diploma in Computer Application and various short term programmes catering to the need of unemployed youth are being conducted. Various special training programmes are also conducted.',
         phone: '0484-2337838',
         email: 'rcernakulam@ihrd.ac.in',
-        website: '',
+        website: 'https://ihrd.ac.in/',
         nearestRailwayStation: 'Ernakulam North - 5 KM',
         nearestBusStand: 'Ernakulam - 8 KM',
         coursesOffered:

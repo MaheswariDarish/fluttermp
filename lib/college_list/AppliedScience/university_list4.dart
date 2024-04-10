@@ -21,7 +21,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '04998-215615',
         mobile: '8547005058',
         email: 'casmanjeswaram@ihrd.ac.in',
-        website: 'casmanjeswaram.ihrd.ac.in',
+        website: 'https://casmanjeswaram.ihrd.ac.in/',
         nearestRailwayStation: 'Kumbala – 400 M',
         nearestBusStand: 'Kumbala – 500 M',
         courses: [
@@ -49,7 +49,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '04972877600',
         mobile: '8547005059',
         email: 'caspayyannur@ihrd.ac.in',
-        website: 'caspayyannur.ihrd.ac.in',
+        website: 'https://caspayyannur.ihrd.ac.in/',
         nearestRailwayStation: 'Payangadi – 6 Km',
         nearestBusStand: 'Neruvambram – 1 Km',
         courses: [
@@ -77,7 +77,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '04935-245484',
         mobile: '8547005060',
         email: 'casmananthavady@ihrd.ac.in',
-        website: 'casmananthavady.ihrd.ac.in',
+        website: 'https://casmananthavady.ihrd.ac.in/',
         nearestRailwayStation: 'Kozhikode - 105 km',
         nearestBusStand: 'Mananthavady – 4 Km',
         courses: [
@@ -103,7 +103,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '0490-2362123',
         mobile: '8547005051',
         email: 'caskoothuparamba@ihrd.ac.in',
-        website: 'caskoothuparamba.ihrd.ac.in',
+        website: 'https://caskuthuparamba.ihrd.ac.in/',
         nearestRailwayStation: 'Kannur – 23 Km',
         nearestBusStand: 'Kuthuparamba – 1 Km',
         courses: [
@@ -131,7 +131,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '0460-2206050',
         mobile: '8547005048',
         email: 'caspattuvam@ihrd.ac.in',
-        website: 'caspattuvam.ihrd.ac.in',
+        website: 'https://caspattuvam.ihrd.ac.in/',
         nearestRailwayStation: 'Kannur – 24 KM',
         nearestBusStand: 'Taliparamba – 7 KM',
         courses: [
@@ -159,7 +159,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '0467-2257541',
         mobile: '8547005052',
         email: 'cascheemeni@ihrd.ac.in',
-        website: 'cascheemeni.ihrd.ac.in',
+        website: 'https://cascheemeni.ihrd.ac.in/',
         nearestRailwayStation: 'Cheruvathur – 19 Km',
         nearestBusStand: 'Cheruvathur – 18 Km',
         courses: [
@@ -186,7 +186,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '0490 - 2423044',
         mobile: '8547003404',
         email: 'casiritty@ihrd.ac.in',
-        website: 'casiritty.ihrd.ac.in',
+        website: 'https://casiritty.ihrd.ac.in/',
         nearestRailwayStation: 'Kannur – 50 Km',
         nearestBusStand: 'Iritty – 5 Km',
         courses: [
@@ -212,7 +212,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '0490 – 2384480',
         mobile: '8547005073',
         email: 'caspinarayi@ihrd.ac.in',
-        website: 'caspinarayi.ihrd.ac.in',
+        website: 'https://caspinarayi.ihrd.ac.in/',
         nearestRailwayStation: 'Thalassery – 10 Km',
         nearestBusStand: 'Pinarayi – 0 Km',
         courses: [
@@ -238,7 +238,7 @@ final List<InstitutionObject> applied_science_university4_list = [
         phone: '0467-240911',
         mobile: '8547005068',
         email: 'mcnileshwaram@ihrd.ac.in',
-        website: 'mcnileshwaram.ihrd.ac.in',
+        website: 'http://mcnileshwaram.ihrd.ac.in/',
         nearestRailwayStation: 'Nileshwaram, Kanhangad – 13 Km',
         nearestBusStand: 'Nileshwarram, Kanhangad – 14 Km',
         courses: [

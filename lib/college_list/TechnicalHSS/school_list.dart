@@ -12,7 +12,7 @@ const technical_hss_list = [
               'Technical Higher secondary school Thiruthiyad, one of the pioneer technical education institution in Kozhikode district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 1969. School has 100 seats Physical Science group 100 seats for Integrated Science group at higher secondary level.',
           phone: '0495-2721070',
           email: 'thssthiruthiyad@ihrd.ac.in',
-          website: 'thssthiruthiyad.ihrd.ac.in',
+          website: 'https://thssthiruthiyad.ihrd.ac.in/',
           nearestRailwayStation: 'Kozhikode',
           nearestBusStand: 'Mofusal – 0.5 KMs',
           hsCourses: [
@@ -22,7 +22,7 @@ const technical_hss_list = [
         ),
       )),
   InstitutionObject(
-      name: 'TECHNICAL HIGHER SECONDARY SCHOOL THIRUTHIYAD',
+      name: 'TECHNICAL HIGHER SECONDARY SCHOOL VAZHAKAD',
       page: TechnicalPage(
         school: TechnicalHSS(
           name: 'TECHNICAL HIGHER SECONDARY SCHOOL VAZHAKKAD',
@@ -31,7 +31,7 @@ const technical_hss_list = [
               'Technical Higher secondary school Vazhakkad, one of the pioneer technical education institution in Malappuram district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 1992. School has 100 seats Physical Science group 100 seats for integrated science group at higher secondary level and 100 seats in secondary level.',
           phone: '0483-2725215',
           email: 'thssvazakkad@ihrd.ac.in',
-          website: 'thssvazhakkad.ihrd.ac.in',
+          website: 'https://thssvazhakkad.ihrd.ac.in/',
           nearestRailwayStation: 'Kozhikkode',
           nearestBusStand: 'Vazhakkad – 0.5 KMs',
           hsCourses: [
@@ -77,7 +77,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Varadium, one of the pioneer technical education institution of Thrissur district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 2003. School has 50 seats Physical Science group 50 seats for integrated science group at higher secondary level.',
         phone: '0487-2214773',
         email: 'thssvaradium@ihrd.ac.in',
-        website: 'thssvaradium.ihrd.ac.in',
+        website: 'https://thssvaradium.ihrd.ac.in/index.php/about-us/history',
         nearestRailwayStation: '12 KMs',
         nearestBusStand: '12 KMs',
         hsCourses: [
@@ -174,7 +174,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Aluva, one of the pioneer technical education institution in Ernakulam district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 2004. School has 100 seats Physical Science group 100 seats for Integrated science group at higher secondary level.',
         phone: '0484-2623573',
         email: 'thssaluva@ihrd.ac.in',
-        website: 'thssaluva.ihrd.ac.in',
+        website: 'https://thssaluva.ihrd.ac.in/',
         nearestRailwayStation: 'Aluva – 0.5 KM',
         nearestBusStand: 'Aluva – 0.5 KM',
         hsCourses: [
@@ -195,7 +195,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Perinthalmanna, one of the pioneer technical education institution in Malappuram district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 2001. School has 100 seats Physical Science group 100 seats for Integrated science group at higher secondary level and 100 seats in secondary level.',
         phone: '04933-225086',
         email: 'thssperinthalmanna@ihrd.ac.in',
-        website: 'thssperinthalmanna.ihrd.ac.in',
+        website: 'https://ihrd.kerala.gov.in/thss/',
         nearestRailwayStation: 'Angadipuram - 200 M',
         nearestBusStand: 'Perinthalmanna - 2 KMs',
         hsCourses: [
@@ -218,7 +218,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Thodupuzha, Muttom, one of the pioneer technical education institution in Idukki district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 1996. School has 140 seats Physical Science group and 40 seats for Integrated science group at higher secondary level. At secondary level, the school has 90 seats and 10 additional seats.',
         phone: '04862-255755',
         email: 'thssthodupuzha@ihrd.ac.in',
-        website: 'thssthodupuzha.ihrd.ac.in',
+        website: 'https://ihrd.kerala.gov.in/thss/',
         nearestAirport: 'Nedumabseery - 70 KM',
         nearestRailwayStation: 'Ernakulam- 68 KM',
         nearestBusStand: 'Thodupzha- 8 KM',
@@ -250,7 +250,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Mallappally, one of the pioneer technical education institution in Pathanamthitta District, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 1997. School has 80 seats Physical Science group 50 seats for Integrated science group at higher secondary level and 50 seats in secondary level.',
         phone: '0469-2680574/2784994',
         email: 'thssmallappally@ihrd.ac.in',
-        website: 'thssmallappally.ihrd.ac.in',
+        website: 'https://thssmallappally.ihrd.ac.in/',
         nearestRailwayStation: 'Thiruvalla - 16 KM',
         nearestBusStand: 'Mallappally - 300 M',
         hsCourses: [
@@ -273,7 +273,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Adoor, one of the pioneer technical education institution in Pathanamthitta district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 2003. School has 50 seats Physical Science group and 50 seats for Integrated science group at higher secondary level.',
         phone: '04734-224078',
         email: 'thssadoor@ihrd.ac.in',
-        website: 'thssadoor.ihrd.ac.in',
+        website: 'https://thssadoor.ihrd.ac.in/',
         nearestRailwayStation: 'Kayamkulam – 15 KMs',
         nearestBusStand: 'Adoor – 0.5 KM',
         hsCourses: [
@@ -293,7 +293,7 @@ const technical_hss_list = [
             'Model Technical Higher Secondary School Kaprassery, one of the pioneer technical education institution in Ernakulum district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 1997. School has 100 seats Physical Science group 50 seats for Integrated Science group at higher secondary level and 90 seats in secondary level.',
         phone: '0484-2604116',
         email: 'thsskaprassery@ihrd.ac.in',
-        website: 'thsskaprassery.ihrd.ac.in',
+        website: 'https://thsskaprassery.ihrd.ac.in/',
         nearestRailwayStation: 'Aluva - 2 KMs',
         nearestBusStand: 'Aluva - 1 KMs',
         hsCourses: [
@@ -316,7 +316,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Kaloor, one of the pioneer technical education institution in Ernakulam district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 1989. School has 150 seats Physical Science group 100 seats for Integrated Science group at higher secondary level and 50 seats in secondary level.',
         phone: '0484-2347132',
         email: 'thsskaloor@ihrd.ac.in',
-        website: 'thsskaloor.ihrd.ac.in',
+        website: 'https://thsskaloor.ihrd.ac.in/',
         nearestRailwayStation: 'Ernakulam North - 1 KMs',
         nearestBusStand: 'Kaloor – 0.5 KMs',
         hsCourses: [
@@ -339,7 +339,7 @@ const technical_hss_list = [
             'Technical Higher secondary school Cherthala, one of the pioneer technical education institution in Alappuzha district, is managed by the Institute of Human Resources Development (IHRD) - established by Government of Kerala on 2004. School has 100 seats Physical Science group 50 seats for Integrated science group at higher secondary level.',
         phone: '0478-2552828',
         email: 'thsscherthala@ihrd.ac.in',
-        website: 'thsscherthala.ihrd.ac.in',
+        website: 'https://thsscherthala.ihrd.ac.in/',
         nearestRailwayStation: 'Cherthala - 7 KM',
         nearestBusStand: 'Cherthala - 5 KM',
         hsCourses: [
