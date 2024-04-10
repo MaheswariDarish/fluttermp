@@ -13,14 +13,14 @@ void main() async {
     WidgetsFlutterBinding.ensureInitialized();
 
   //Authentication
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
-  //Push Notifications
-  await NotificationsApi().init();
-  runApp(MyApp());
-
+    // Initialize Push Notifications
+    await NotificationsApi().init();
+  }
 }
 
 var kColorScheme =

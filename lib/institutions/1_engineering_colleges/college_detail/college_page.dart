@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 //This dart file is used for displaying the details of a selected college
-
+import 'package:flutter_application_1/LaunchURL/launch_url.dart';
 //Constants
 import 'package:flutter_application_1/constants.dart';
 
@@ -316,6 +316,93 @@ class _EngCollegePageState extends State<EngCollegePage> {
           ]))
         ]),
       ),
+      bottomNavigationBar: BottomAppBar(
+  child: Padding(
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        ElevatedButton(
+          onPressed: () {
+            _showContactOptionsDialog(context);
+          },
+          child: Text('Contact Now'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+           Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LaunchURL(url: widget.college.website),
+              ),
+            );
+          },
+          child: Text('Visit Website'),
+        ),
+      ],
+    ),
+  ),
+),
     );
   }
+  void _showContactOptionsDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Contact Options'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                GestureDetector(
+                  child: Text('Call'),
+                  onTap: () {
+                    _launchPhone(widget.college.phone);
+                    Navigator.of(context).pop();
+                  },
+                ),
+                Padding(padding: EdgeInsets.all(8.0)),
+                GestureDetector(
+                  child: Text('Email'),
+                  onTap: () {
+                    _launchEmail(widget.college.email);
+                    Navigator.of(context).pop();
+                  },
+                ),Padding(padding: EdgeInsets.all(8.0)),
+                GestureDetector(
+                  child: Text('Call Mobile'),
+                  onTap: () {
+                    _launchPhone(widget.college.mobile);
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _launchPhone(String phoneNumber) async {
+    final phone = 'tel:$phoneNumber';
+    if (await canLaunch(phone)) {
+      await launch(phone);
+    } else {
+      throw 'Could not launch $phone';
+    }
+  }
+
+  void _launchEmail(String email) async {
+    final Uri _emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+    if (await canLaunch(_emailLaunchUri.toString())) {
+      await launch(_emailLaunchUri.toString());
+    } else {
+      throw 'Could not launch $_emailLaunchUri';
+    }
+  }
 }
+

@@ -47,7 +47,7 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
     const InstitutionObject(name: 'Technical Higher Secondary School', page: TechnicalHSSList()),
     InstitutionObject(name: 'Model Finishing School', page: FinishingSchoolList()),
     InstitutionObject(name: 'Regional Centers', page: RegionalCentreList()),
-    InstitutionObject(name: 'Extension/Study Centers', page: Placeholder()),
+    //InstitutionObject(name: 'Extension/Study Centers', page: Placeholder()),
   ];
 
   @override

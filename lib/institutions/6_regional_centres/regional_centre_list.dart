@@ -4,7 +4,7 @@ import 'package:flutter_application_1/college_list/RegionalCentre/RC_list.dart';
 //This dart file is used for displaying the list of engineering colleges of IHRD
 
 //importing the regionalCentreList
-
+import 'package:flutter_application_1/institutions/2_poly_colleges/components/PolyClgTile.dart';
 //constants
 import 'package:flutter_application_1/constants.dart';
 
@@ -41,7 +41,24 @@ class _RegionalCentreListState extends State<RegionalCentreList> {
       });
     });
   }
-
+ final List<String> imgurl = [
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    'assets/engclgimg/mec.png',
+    
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +80,7 @@ class _RegionalCentreListState extends State<RegionalCentreList> {
       ),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: bgColor,
+          //gradient: bgColor,
         ),
         child: SingleChildScrollView(
             controller: _scrollController,
@@ -85,9 +102,11 @@ class _RegionalCentreListState extends State<RegionalCentreList> {
                     shrinkWrap: true,
                     itemCount: regionalCentreList.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return Center(
-                        child: Text('.'),
-                      );
+                      return PolyClgTile(
+                          imagepath: imgurl[index],
+                          name:regionalCentreList[index].name ,
+                          page:regionalCentreList[index].page ,
+                        );
                     },
                   ),
                 ),
