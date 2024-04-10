@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_1/about.dart';
 import 'package:flutter_application_1/institutions/institution_page.dart';
 import 'package:flutter_application_1/profile.dart';
-
+import 'package:flutter_application_1/api/notifications_api.dart';
 import 'package:flutter_application_1/screens/SreenHome.dart';
-
+import 'firebase_options.dart';
 import 'package:flutter_application_1/settings.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+    WidgetsFlutterBinding.ensureInitialized();
+
+  //Authentication
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  //Push Notifications
+  await NotificationsApi().init();
   runApp(MyApp());
+
 }
 
 var kColorScheme =
