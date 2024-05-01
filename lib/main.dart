@@ -8,19 +8,10 @@ import 'package:flutter_application_1/screens/SreenHome.dart';
 import 'firebase_options.dart';
 import 'package:flutter_application_1/settings.dart';
 import 'package:get/get.dart';
-
-void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-
+void main() {
+ runApp(MyApp());
   //Authentication
-  if (Firebase.apps.isEmpty) {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-
-    // Initialize Push Notifications
-    await NotificationsApi().init();
-  }
+ 
 }
 
 var kColorScheme =
