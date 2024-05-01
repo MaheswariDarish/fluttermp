@@ -3,6 +3,7 @@ import 'package:flutter_application_1/colors.dart';
 import 'package:flutter_application_1/screens/search/course_model.dart';
 import 'package:flutter_application_1/college_list/Engineering/college_list.dart';
 import 'package:flutter_application_1/institutions/1_engineering_colleges/college_detail/college_page.dart';
+
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
 
@@ -19,45 +20,58 @@ class _SearchState extends State<SearchPage> {
     CourseModal(
         courseName: "Electronics and Communication Engineering ",
         collegeName: "MEC, Ernakulam",
-        page:engineering_college_list[1].page.toString()),
+        page: engineering_college_list[1].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
-        courseName: "Computer Science and Engineering",page:engineering_college_list[1].page.toString()),
+        courseName: "Computer Science and Engineering",
+        page: engineering_college_list[1].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
-        courseName: "Electrical and Electronics Engineering",page:engineering_college_list[1].page.toString()),
-    CourseModal(
-        collegeName: "MEC, Ernakulam", courseName: "Mechanical Engineering",page:engineering_college_list[1].page.toString()),
+        courseName: "Electrical and Electronics Engineering",
+        page: engineering_college_list[1].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
-        courseName: "Computer Science and Business systems",page:engineering_college_list[1].page.toString()),
+        courseName: "Mechanical Engineering",
+        page: engineering_college_list[1].page),
+    CourseModal(
+        collegeName: "MEC, Ernakulam",
+        courseName: "Computer Science and Business systems",
+        page: engineering_college_list[1].page),
 
     CourseModal(
         collegeName: "CE, Chengannur",
-        courseName: "Computer Science and Engineering",page:engineering_college_list[2].page.toString()),
+        courseName: "Computer Science and Engineering",
+        page: engineering_college_list[2].page),
 
     CourseModal(
         collegeName: "CE, Chengannur",
-        courseName: "Electronics and Communication Engineering",page:engineering_college_list[2].page.toString()),
+        courseName: "Electronics and Communication Engineering",
+        page: engineering_college_list[2].page),
 
     CourseModal(
         collegeName: "CE, Chengannur",
-        courseName: "Electrical and Electronics Engineering",page:engineering_college_list[2].page.toString()),
+        courseName: "Electrical and Electronics Engineering",
+        page: engineering_college_list[2].page),
 
     CourseModal(
         collegeName: "CE, Adoor",
-        courseName: "Electronics and Communication Engineering",page:engineering_college_list[3].page.toString()),
-
-    CourseModal(
-        collegeName: "CE, Adoor", courseName: "Mechanical Engineering ",page:engineering_college_list[3].page.toString()),
-
-    CourseModal(
-        collegeName: "CE, Adoor",
-        courseName: "Computer Science and Engineering",page:engineering_college_list[3].page.toString()),
+        courseName: "Electronics and Communication Engineering",
+        page: engineering_college_list[3].page),
 
     CourseModal(
         collegeName: "CE, Adoor",
-        courseName: "Electrical and Electronics Engineering",page:engineering_college_list[3].page.toString()),
+        courseName: "Mechanical Engineering ",
+        page: engineering_college_list[3].page),
+
+    CourseModal(
+        collegeName: "CE, Adoor",
+        courseName: "Computer Science and Engineering",
+        page: engineering_college_list[3].page),
+
+    CourseModal(
+        collegeName: "CE, Adoor",
+        courseName: "Electrical and Electronics Engineering",
+        page: engineering_college_list[3].page),
   ];
 
   //List to Display and Filter
@@ -78,12 +92,13 @@ class _SearchState extends State<SearchPage> {
       searchList = result;
     });
   }
-    void navigateToPage(String page) {
-    Navigator.pushNamed(context, page);
+
+  void navigateToPage(Widget page) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => page));
   }
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: SizedBox(
@@ -122,11 +137,13 @@ class _SearchState extends State<SearchPage> {
             child: ListTile(
               title: Text(
                 searchList[index].courseName,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               subtitle: Text(
                 searchList[index].collegeName,
-                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
               onTap: () {
                 // Navigate to the selected page

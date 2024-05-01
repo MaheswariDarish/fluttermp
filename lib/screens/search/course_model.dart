@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
+
 class InstitutionObject {
   final String name;
-  final String page;
-  
+  final Widget page;
+
   InstitutionObject({required this.name, required this.page});
 }
 
@@ -12,7 +14,6 @@ class CourseModal extends InstitutionObject {
   CourseModal({
     required this.courseName,
     required this.collegeName,
-    required String page,
+    required Widget page,
   }) : super(name: courseName, page: page);
 }
-
