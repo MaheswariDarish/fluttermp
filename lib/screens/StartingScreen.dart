@@ -47,21 +47,21 @@ class _StartScreenState extends State<StartingScreen> {
           ),
         ),
         const SizedBox(height: 20),
-         ElevatedButton(
+        ElevatedButton(
           onPressed: () {
             Navigator.push(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.rightToLeft,
-                        child: InstitutionsPage(),
-                        duration: const Duration(milliseconds: 250),
-                        reverseDuration:
-                            const Duration(microseconds: 500),
-                      ),
-                    );
+              context,
+              PageTransition(
+                type: PageTransitionType.rightToLeft,
+                child: InstitutionsPage(),
+                duration: const Duration(milliseconds: 250),
+                reverseDuration: const Duration(microseconds: 500),
+              ),
+            );
           },
           child: Text('Institutions'),
-        ),const SizedBox(height: 25),
+        ),
+        const SizedBox(height: 25),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(10),
@@ -82,9 +82,7 @@ class _StartScreenState extends State<StartingScreen> {
               ],
             ),
           ),
-        ),//const SizedBox(height: 30),
-       
-
+        ), //const SizedBox(height: 30),
       ],
     );
   }

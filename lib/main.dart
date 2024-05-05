@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_application_1/about.dart';
+import 'package:flutter_application_1/screens/about_screen.dart';
 import 'package:flutter_application_1/institutions/institution_page.dart';
 
 import 'package:flutter_application_1/api/notifications_api.dart';
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       routes: {
-        '/about': (context) => About(),
+        '/about': (context) => AboutScreen(),
         '/settings': (context) => Settings(),
         '/institutions': (context) => InstitutionsPage(),
         '/rank': (context) => RankScreen(),
