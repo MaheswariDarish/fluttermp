@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:html/parser.dart' as parser;
 import 'package:http/http.dart' as http;
-import 'package:flutter_html/flutter_html.dart';
 import 'package:html/dom.dart' as dom;
+import 'adm/btechadm/page1.dart';
+import 'adm/btechadm/page2.dart';
 
 class BtechPage extends StatefulWidget {
   const BtechPage({Key? key});
@@ -13,13 +14,16 @@ class BtechPage extends StatefulWidget {
 
 class _BtechPageState extends State<BtechPage> {
   List<String> scrapedHeadings = [];
-  bool isLoading = false;
+  bool isLoading = true; // Initially set to true to show loading indicator
+
+  @override
+  void initState() {
+    super.initState();
+    // Call the function to scrape data when the widget is initialized
+    extractData();
+  }
 
   Future<void> extractData() async {
-    setState(() {
-      isLoading = true;
-    });
-
     final response = await http.Client().get(Uri.parse('https://ihrd.ac.in/index.php/admissions/b-tech-m-tech-admission-in-engineering'));
 
     if (response.statusCode == 200) {
@@ -36,7 +40,7 @@ class _BtechPageState extends State<BtechPage> {
           }
         }
         
-        // Update state to trigger UI rebuild
+        // Update state to trigger UI rebuild and hide loading indicator
         setState(() {
           isLoading = false;
         });
@@ -51,6 +55,21 @@ class _BtechPageState extends State<BtechPage> {
       });
     }
   }
+  
+  // Function to handle button press and navigate to a new page
+  void navigateToPage(String heading) {
+    if (heading == scrapedHeadings[0]) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Page1()),
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Page2()),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,22 +77,17 @@ class _BtechPageState extends State<BtechPage> {
       appBar: AppBar(title: Text('Btech Page')),
       body: Center(
         child: isLoading
-            ? CircularProgressIndicator()
+            ? CircularProgressIndicator() // Show loading indicator while data is being fetched
             : Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   for (String heading in scrapedHeadings)
                     ElevatedButton(
                       onPressed: () {
-                        // Handle button press
+                        navigateToPage(heading);
                       },
                       child: Text(heading),
                     ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.08),
-                  ElevatedButton(
-                    onPressed: extractData,
-                    child: Text('Scrape Data'),
-                  ),
                 ],
               ),
       ),

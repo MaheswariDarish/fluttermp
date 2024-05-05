@@ -22,7 +22,7 @@ class AdmissionsScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     // builder: (context) => LaunchURL(url: 'https://ihrd.ac.in/index.php/admissions/b-tech-m-tech-admission-in-engineering'),
-                  builder: (context) =>BtechPage(),
+                  builder: (context) =>BtechPage()
                   ),
                 );
               },
