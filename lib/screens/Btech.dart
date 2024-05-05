@@ -24,22 +24,26 @@ class _BtechPageState extends State<BtechPage> {
   }
 
   Future<void> extractData() async {
-    final response = await http.Client().get(Uri.parse('https://ihrd.ac.in/index.php/admissions/b-tech-m-tech-admission-in-engineering'));
+    final response = await http.Client().get(Uri.parse(
+        'https://ihrd.ac.in/index.php/admissions/b-tech-m-tech-admission-in-engineering'));
 
     if (response.statusCode == 200) {
       var document = parser.parse(response.body);
       try {
         // Use the CSS selector to target the specific elements
-        List<dom.Element> headingElements = document.querySelectorAll('#jsn-mainbody > div.item-page > div.articleBody > table > tbody > tr > td > strong');
-        
+        List<dom.Element> headingElements = document.querySelectorAll(
+            '#jsn-mainbody > div.item-page > div.articleBody > table > tbody > tr > td > strong');
+
         // Extract the text from each heading element
         for (var element in headingElements) {
           // Check if the text contains "notification" or "prospectus"
-          if (!element.text.toLowerCase().contains('notification') && !element.text.toLowerCase().contains('prospectus') && !element.text.toLowerCase().contains('online application')) {
+          if (!element.text.toLowerCase().contains('notification') &&
+              !element.text.toLowerCase().contains('prospectus') &&
+              !element.text.toLowerCase().contains('online application')) {
             scrapedHeadings.add(element.text);
           }
         }
-        
+
         // Update state to trigger UI rebuild and hide loading indicator
         setState(() {
           isLoading = false;
@@ -55,7 +59,7 @@ class _BtechPageState extends State<BtechPage> {
       });
     }
   }
-  
+
   // Function to handle button press and navigate to a new page
   void navigateToPage(String heading) {
     if (heading == scrapedHeadings[0]) {
@@ -78,17 +82,29 @@ class _BtechPageState extends State<BtechPage> {
       body: Center(
         child: isLoading
             ? CircularProgressIndicator() // Show loading indicator while data is being fetched
-            : Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  for (String heading in scrapedHeadings)
-                    ElevatedButton(
-                      onPressed: () {
-                        navigateToPage(heading);
-                      },
-                      child: Text(heading),
-                    ),
-                ],
+            : Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    for (String heading in scrapedHeadings)
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(5, 20, 5, 20),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            navigateToPage(heading);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text(
+                              heading,
+                              style: TextStyle(fontSize: 17),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
               ),
       ),
     );

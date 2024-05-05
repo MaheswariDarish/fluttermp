@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LaunchURL/launch_url.dart';
 import 'package:flutter_application_1/screens/Btech.dart';
+
 class AdmissionsScreen extends StatelessWidget {
   const AdmissionsScreen({Key? key}) : super(key: key);
 
@@ -8,10 +9,11 @@ class AdmissionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admissions'),
+        title: const Text('Admissions'),
         centerTitle: true,
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -22,50 +24,80 @@ class AdmissionsScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     // builder: (context) => LaunchURL(url: 'https://ihrd.ac.in/index.php/admissions/b-tech-m-tech-admission-in-engineering'),
-                  builder: (context) =>BtechPage()
+                    builder: (context) => const BtechPage(),
                   ),
                 );
               },
-              child: Text('BTECH/MTECH ADMISSIONS IN ENGINEERING COLLEGES'),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'BTECH/MTECH ADMISSIONS IN ENGINEERING COLLEGES',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
-            SizedBox(height: 20), // Adding some space between buttons
+            const SizedBox(height: 30), // Adding some space between buttons
             ElevatedButton(
               onPressed: () {
                 // Handle onPressed for second button
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LaunchURL(url: 'https://ihrd.ac.in/index.php/admissions/ug-pg-admission-in-cas'),
+                    builder: (context) => LaunchURL(
+                        url:
+                            'https://ihrd.ac.in/index.php/admissions/ug-pg-admission-in-cas'),
                   ),
                 );
               },
-              child: Text('UG/PG Admission in the Colleges of Applied Sciences'),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'UG/PG Admission in the Colleges of Applied Sciences',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
-            SizedBox(height: 20), // Adding some space between buttons
+            const SizedBox(height: 30), // Adding some space between buttons
             ElevatedButton(
               onPressed: () {
                 // Handle onPressed for second button
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LaunchURL(url: 'https://ihrd.ac.in/index.php/admissions/diploma-admission-in-the-polytechnics'),
+                    builder: (context) => LaunchURL(
+                        url:
+                            'https://ihrd.ac.in/index.php/admissions/diploma-admission-in-the-polytechnics'),
                   ),
                 );
               },
-              child: Text('Diploma Admission in the Polytechnics Colleges'),
+              child: const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  'Diploma Admission in the Polytechnics Colleges',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
-             SizedBox(height: 20), // Adding some space between buttons
+            const SizedBox(height: 30), // Adding some space between buttons
             ElevatedButton(
               onPressed: () {
                 // Handle onPressed for second button
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LaunchURL(url: 'https://ihrd.ac.in/index.php/admissions/admission-in-technical-higher-secondary-school'),
+                    builder: (context) => LaunchURL(
+                        url:
+                            'https://ihrd.ac.in/index.php/admissions/admission-in-technical-higher-secondary-school'),
                   ),
                 );
               },
-              child: Text('Admission in Technical Higher Secondary School '),
+              child: const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  'Admission in Technical Higher Secondary School ',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
           ],
         ),

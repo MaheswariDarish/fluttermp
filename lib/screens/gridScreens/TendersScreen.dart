@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/LaunchURL/launch_url.dart';
 
 class TendersScreen extends StatelessWidget {
   const TendersScreen({super.key});
@@ -10,7 +11,15 @@ class TendersScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Text('Tenders'),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (ctx) => LaunchURL(
+                    url:
+                        "https://www.ihrd.ac.in/index.php/resources/tenders-quotation")));
+          },
+          child: const Text("view Tenders"),
+        ),
       ),
     );
   }
