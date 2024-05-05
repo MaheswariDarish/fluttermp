@@ -20,58 +20,58 @@ class _SearchState extends State<SearchPage> {
     CourseModal(
         courseName: "Electronics and Communication Engineering ",
         collegeName: "MEC, Ernakulam",
-        page: engineering_college_list[1].page),
+        page: engineering_college_list[0].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
         courseName: "Computer Science and Engineering",
-        page: engineering_college_list[1].page),
+        page: engineering_college_list[0].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
         courseName: "Electrical and Electronics Engineering",
-        page: engineering_college_list[1].page),
+        page: engineering_college_list[0].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
         courseName: "Mechanical Engineering",
-        page: engineering_college_list[1].page),
+        page: engineering_college_list[0].page),
     CourseModal(
         collegeName: "MEC, Ernakulam",
         courseName: "Computer Science and Business systems",
-        page: engineering_college_list[1].page),
+        page: engineering_college_list[0].page),
 
     CourseModal(
         collegeName: "CE, Chengannur",
         courseName: "Computer Science and Engineering",
-        page: engineering_college_list[2].page),
+        page: engineering_college_list[1].page),
 
     CourseModal(
         collegeName: "CE, Chengannur",
         courseName: "Electronics and Communication Engineering",
-        page: engineering_college_list[2].page),
+        page: engineering_college_list[1].page),
 
     CourseModal(
         collegeName: "CE, Chengannur",
         courseName: "Electrical and Electronics Engineering",
-        page: engineering_college_list[2].page),
+        page: engineering_college_list[1].page),
 
     CourseModal(
         collegeName: "CE, Adoor",
         courseName: "Electronics and Communication Engineering",
-        page: engineering_college_list[3].page),
+        page: engineering_college_list[2].page),
 
     CourseModal(
         collegeName: "CE, Adoor",
         courseName: "Mechanical Engineering ",
-        page: engineering_college_list[3].page),
+        page: engineering_college_list[2].page),
 
     CourseModal(
         collegeName: "CE, Adoor",
         courseName: "Computer Science and Engineering",
-        page: engineering_college_list[3].page),
+        page: engineering_college_list[2].page),
 
     CourseModal(
         collegeName: "CE, Adoor",
         courseName: "Electrical and Electronics Engineering",
-        page: engineering_college_list[3].page),
+        page: engineering_college_list[2].page),
   ];
 
   //List to Display and Filter

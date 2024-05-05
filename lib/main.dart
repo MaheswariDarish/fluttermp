@@ -2,16 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_1/about.dart';
 import 'package:flutter_application_1/institutions/institution_page.dart';
-import 'package:flutter_application_1/profile.dart';
+
 import 'package:flutter_application_1/api/notifications_api.dart';
 import 'package:flutter_application_1/screens/SreenHome.dart';
+import 'package:flutter_application_1/screens/rank_screen.dart';
 import 'firebase_options.dart';
 import 'package:flutter_application_1/settings.dart';
 import 'package:get/get.dart';
+import 'package:flutter/services.dart';
+
 void main() {
- runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(MyApp());
   //Authentication
- 
 }
 
 var kColorScheme =
@@ -26,9 +31,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       routes: {
         '/about': (context) => About(),
-        '/profile': (context) => Profile(),
         '/settings': (context) => Settings(),
-        '/institutions': (context) => InstitutionsPage()
+        '/institutions': (context) => InstitutionsPage(),
+        '/rank': (context) => RankScreen(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
