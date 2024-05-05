@@ -88,7 +88,7 @@ final List<InstitutionObject> engineering_college_list = [
         phone: '4734-230640(P)',
         mobile: '8547005100',
         email: 'ceadoor@ihrd.ac.in',
-        website: 'https://www.ceadoor.ihrd.ac.in/',
+        website: 'https://cea.ac.in/',
         principal: 'Dr. S. Sheela',
         nearestRailwayStation: 'Chengannur',
         nearestBusStand: 'Adoor',
